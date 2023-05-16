@@ -2,7 +2,7 @@
 
 namespace JobSearch.Models
 {
-    public class JobSearch
+    public class JobSearchData
     {
         public int Id { get; set; }
         [StringLength(50)]
@@ -20,6 +20,6 @@ namespace JobSearch.Models
         public DateTime FollowUpDates { get; set; }
         [StringLength(2000)]
         public string Notes { get; set; }
-        public JobSearch() { }
+        public JobSearchData() { }
     }
 }

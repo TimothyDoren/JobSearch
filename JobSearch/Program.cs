@@ -1,4 +1,4 @@
-using JobSearch.Models;
+using JobSearch;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
