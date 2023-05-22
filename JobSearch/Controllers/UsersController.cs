@@ -20,6 +20,19 @@ namespace JobSearch.Controllers
             _context = context;
         }
 
+        //Login for Users
+        [HttpGet("{username}/{password}")]
+        public async Task<ActionResult<User>> Login(string username, string password)
+        {
+            var user = await _context.Users.SingleOrDefaultAsync(x => x.Username == username && x.Password == password);
+            if (user is null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
         // GET: api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
